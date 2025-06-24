@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+/* Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: #f8fafc;
+  background-image: radial-gradient(
+      circle at 20% 20%,
+      #e0e7ef 0px,
+      transparent 40%
+    ),
+    radial-gradient(circle at 80% 0%, #f3f4f6 0px, transparent 60%),
+    radial-gradient(circle at 80% 80%, #e5e7eb 0px, transparent 50%),
+    repeating-radial-gradient(
+      circle,
+      #e5e7eb 1px,
+      transparent 2px,
+      transparent 40px
+    );
+  background-size: cover, cover, cover, 16px 16px;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+  min-height: 100vh;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+
+.row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.mb{
+  margin-bottom: 16px;
+}
+
+.mt{
+  margin-top: 16px;
+}
+
+.pd{
+  padding: 4px;
+}
+/* Navbar Styling */
+#navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  height: 56px;
+  max-width: 56rem;
+  width: 92%;
+  padding: 8px 12px;
+  background: rgb(255, 255, 255);
+  gap: 20px;
+  transition: background 0.3s ease, box-shadow 0.3s ease,
+    border-radius 0.3s ease;
+}
+
+#navbar.fixed {
+  position: sticky;
+  top: 0;
+  border-radius: 1.8rem;
+  background: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, box-shadow 0.3s ease,
+    border-radius 0.3s ease;
+}
+
+/* Main Container Styling */
+.main-container {
+  margin: 0 auto 0 auto;
+  max-width: 56rem;
+  width: 92%;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Profile Image Styling */
+.profile-img {
+  border-radius: 50%;
+  width: 40px; /* Set a fixed width */
+  height: 40px; /* Set a fixed height */
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: #22223b;
+  font-weight: 700;
+  transition: color 0.2s;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  background: #e0e7ef;
+  color: #3a3a40;
+}
+
+/* Theme Button */
+.btn#theme-btn {
+  background: #f3f4f6;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 1.2rem;
+}
+
+.btn#theme-btn:hover {
+  background: #e0e7ef;
+}
+
+/* Content Styling */
+.content {
+  font-size: 1.08rem;
+  color: #22223b;
+  line-height: 1.7;
+  margin-top: 12px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.profession {
+  width: 150px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  border-radius: 4px; /* Rounded corners for hover effect */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.profession:hover {
+  background-color: #e0e7ef; /* Light background on hover */
+  color: #22223b; /* Darker text color on hover */
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #577da8;
+  margin: 22px 0;
+}
+
+.exp-title{
+  width: 80px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  border-radius: 4px; /* Rounded corners for hover effect */
+   background-color: #e0e7ef;
+}
+
+.experience-description{
+font-size: 1rem;
+}
+
+.svg{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin: 2px;
+}
+
+.stack {
+  width: 50px;
+  height: 50px;
+}
+
+
+
