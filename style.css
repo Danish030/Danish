@@ -58,30 +58,39 @@ h6 {
   text-wrap: balance;
 }
 
-
-.row{
+.row {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 16px;
+  flex-wrap: wrap;
 }
-.col{
+
+.j-center {
+  justify-content: center;
+}
+
+.col {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 }
 
-.mb{
+.mb {
   margin-bottom: 16px;
 }
 
-.mt{
+.mt {
   margin-top: 16px;
 }
 
-.pd{
+.pd {
   padding: 4px;
+}
+
+.pd-16 {
+  padding: 16px;
 }
 /* Navbar Styling */
 #navbar {
@@ -188,8 +197,6 @@ h6 {
   padding: 20px;
 }
 
-
-
 .name {
   font-size: 1.5rem;
   font-weight: 700;
@@ -216,20 +223,20 @@ h6 {
   margin: 22px 0;
 }
 
-.exp-title{
-  width: 80px;
-  font-size: 1rem;
-  font-weight: 500;
+.main-title {
+  width: 120px;
+  font-size: 1.2rem;
+  font-weight: 800;
   color: #555;
   border-radius: 4px; /* Rounded corners for hover effect */
-   background-color: #e0e7ef;
+  background-color: #e0e7ef;
 }
 
-.experience-description{
-font-size: 1rem;
+.experience-description {
+  font-size: 1rem;
 }
 
-.svg{
+.svg {
   display: inline-block;
   width: 25px;
   height: 25px;
@@ -242,5 +249,129 @@ font-size: 1rem;
   height: 50px;
 }
 
+.category {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
+.category h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+figure {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center items along the cross axis (horizontally in this case) */
+}
+
+figcaption {
+  text-align: center; /* Center the text content within the figcaption */
+}
+
+.achievments {
+  margin-top: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 370px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  padding: 25px;
+  position: relative;
+}
+
+.profile {
+  width: 100%;
+  max-width: 370px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.card .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text .project-name{
+  font-size: 24px;
+  font-weight: 500;
+}
+.text .project-details {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.card .media-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.media-buttons .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+.contact {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin: 0.5rem 0 0.2rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
 
