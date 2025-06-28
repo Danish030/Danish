@@ -11,24 +11,9 @@
 body {
   font-family: "Manrope", sans-serif;
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
   background-color: #f8fafc;
-  background-image: radial-gradient(
-      circle at 20% 20%,
-      #e0e7ef 0px,
-      transparent 40%
-    ),
-    radial-gradient(circle at 80% 0%, #f3f4f6 0px, transparent 60%),
-    radial-gradient(circle at 80% 80%, #e5e7eb 0px, transparent 50%),
-    repeating-radial-gradient(
-      circle,
-      #e5e7eb 1px,
-      transparent 2px,
-      transparent 40px
-    );
-  background-size: cover, cover, cover, 16px 16px;
-  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
 
 img,
@@ -96,6 +81,23 @@ h6 {
 .pd-16 {
   padding: 16px;
 }
+
+
+/* Main container with consistent centering */
+.main-container {
+  margin: 0 auto;
+  max-width: 56rem;
+  width: 92%;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  position: relative; /* Needed for decorative stripes */
+}
+
+
 /* Navbar Styling */
 #navbar {
   display: flex;
@@ -107,10 +109,9 @@ h6 {
   max-width: 56rem;
   width: 92%;
   padding: 8px 12px;
-  background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255, 0.85);
   gap: 20px;
-  transition: background 0.3s ease, box-shadow 0.3s ease,
-    border-radius 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 #navbar.fixed {
@@ -119,22 +120,45 @@ h6 {
   border-radius: 1.8rem;
   background: #f9f9f9;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s ease, box-shadow 0.3s ease,
-    border-radius 0.3s ease;
+  transform: translateY(0);
+  opacity: 1;
 }
 
-/* Main Container Styling */
-.main-container {
-  margin: 0 auto 0 auto;
-  max-width: 56rem;
-  width: 92%;
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* Decorative stripes */
+.decorative-left-stripe,
+.decorative-right-stripe {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 16px;
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.03),
+    rgba(0, 0, 0, 0.03) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  background-attachment: fixed;
+  background-repeat: repeat;
 }
+
+.decorative-left-stripe {
+  left: 0;
+}
+
+.decorative-right-stripe {
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  .decorative-left-stripe,
+  .decorative-right-stripe {
+    width: 32px;
+  }
+}
+
 
 .profile {
   width: 100%;
@@ -201,7 +225,7 @@ h6 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 40px;
 }
 
 .name {
@@ -258,8 +282,6 @@ h6 {
   border-radius: 999px;
   padding: 0.3rem 0.6rem;
   margin-left: -10px;
-  position: relative;
-  z-index: 1;
   transition: all 0.3s ease;
   overflow: hidden;
   white-space: nowrap;
@@ -342,7 +364,6 @@ figcaption {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   border-radius: 24px;
   padding: 25px;
-  position: relative;
 }
 
 

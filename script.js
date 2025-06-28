@@ -1,12 +1,12 @@
-const navbar = document.getElementById("navbar");
-const navbarOffsetTop = navbar.offsetTop;
-
-// Listen to scroll events
+let lastScroll = 0;
 window.addEventListener("scroll", () => {
-  // If we scrolled past the navbar's original position
-  if (window.scrollY >= navbarOffsetTop) {
-    navbar.classList.add("fixed"); // Add the 'fixed' class for rounded border
-  } else {
-    navbar.classList.remove("fixed"); // Remove the 'fixed' class to return to normal
+  const navbar = document.getElementById("navbar");
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > 50 && lastScroll <= 50) {
+    navbar.classList.add("fixed");
+  } else if (currentScroll <= 50 && lastScroll > 50) {
+    navbar.classList.remove("fixed");
   }
+  lastScroll = currentScroll;
 });
